@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           });`,
         }}
       />
-      <ThemeProvider attribute="class">
+      <ThemeProvider defaultTheme="system">
         <Component {...pageProps} />
       </ThemeProvider>
     </>

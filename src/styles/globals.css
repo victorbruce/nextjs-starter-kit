@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #e5e5e5;
+  --color-danger: #ce3426;
+  --color-success: #4ade80;
+  --color-warning: #facc15;
+  --color-neutral: #6b7280;
+  --color-light: #fff;
+  --color-dark: #000;
+}
+
+[data-theme="dark"] {
+  --color-text-primary: var(--color-primary);
+  --color-background-primary: var(--color-dark);
+  --color-text-secondary: var(--color-secondary);
+  --color-background-secondary: #333;
+}
+
+[data-theme="light"] {
+  --color-text-primary: var(--color-dark);
+  --color-text-secondary: var(--color-neutral);
+  --color-background-primary: var(--color-light);
+  --color-background-secondary: var(--color-secondary);
+}
+
+[data-theme="emerald"] {
+  --color-text-primary: #e0cfb8;
+  --color-text-secondary: #f7421c;
+  --color-background-primary: #201b13;
+  --color-background-secondary: #62461a;
+}
+
+[data-theme="pink"] {
+  --color-text-primary: rgb(229, 27, 61);
+  --color-text-secondary: var(--color-dark);
+  --color-background-primary: rgb(231, 178, 187);
+  --color-background-secondary: rgb(70, 41, 45);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-family: "Inter";
+  }
+}
