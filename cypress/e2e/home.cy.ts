@@ -7,3 +7,5 @@ describe("Home Page", () => {
     cy.contains("hello").should("exist");
   });
 });
+
+export {}
