@@ -3,42 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #fff;
-  --color-secondary: #e5e5e5;
-  --color-danger: #ce3426;
-  --color-success: #4ade80;
-  --color-warning: #facc15;
-  --color-neutral: #6b7280;
-  --color-light: #fff;
-  --color-dark: #000;
+  /* Color Pallete */
+  --white: #ffffff;
+  --black: #000000;
+  --green: #4ade80;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --amber: #fbbf24;
+  --gray: #9ca3af;
+  --gray-100: #eee;
+  --gray-200: #374151;
+  --sky: #00bbff;
+
+  --color-primary: var(--blue);
+  --color-secondary: var(--gray);
+  --color-danger: var(--red);
+  --color-success: var(--green);
+  --color-warning: var(--amber);
+  --color-light: var(--white);
+  --color-dark: var(--black);
+  --color-accent: var(--sky);
 }
 
 [data-theme="dark"] {
-  --color-text-primary: var(--color-primary);
+  --color-text-title: var(--color-light);
+  --color-text-body: var(--color-secondary);
   --color-background-primary: var(--color-dark);
-  --color-text-secondary: var(--color-secondary);
-  --color-background-secondary: #333;
+  --color-background-secondary: var(--color-secondary);
+  --color-accent-icon: var(--color-accent);
 }
 
 [data-theme="light"] {
-  --color-text-primary: var(--color-dark);
-  --color-text-secondary: var(--color-neutral);
+  --color-text-title: var(--color-dark);
+  --color-text-body: var(--gray-200);
   --color-background-primary: var(--color-light);
-  --color-background-secondary: var(--color-secondary);
-}
-
-[data-theme="emerald"] {
-  --color-text-primary: #e0cfb8;
-  --color-text-secondary: #f7421c;
-  --color-background-primary: #201b13;
-  --color-background-secondary: #62461a;
-}
-
-[data-theme="pink"] {
-  --color-text-primary: rgb(229, 27, 61);
-  --color-text-secondary: var(--color-dark);
-  --color-background-primary: rgb(231, 178, 187);
-  --color-background-secondary: rgb(70, 41, 45);
+  --color-background-secondary: var(--gray-100);
+  --color-accent-icon: var(--color-accent);
 }
 
 @font-face {
@@ -69,7 +69,72 @@
 
   body {
     background-color: var(--color-background-primary);
-    color: var(--color-text-primary);
+    color: var(--color-text-body);
     font-family: "Inter";
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--color-text-title);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-text-title);
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-text-title);
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 1024) {
+    h1 {
+      font-size: 58px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 56px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 25px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 42px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 19px;
+    }
+    h4 {
+      font-size: 15px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }

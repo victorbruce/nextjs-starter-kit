@@ -2,7 +2,6 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  darkMode: false,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -10,9 +9,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        accent: "var(--color-accent-icon)",
         fore: {
-          primary: "var(--color-text-primary)",
-          secondary: "var(--color-text-secondary)",
+          primary: "var(--color-text-title)",
+          secondary: "var(--color-text-body)",
         },
         back: {
           primary: "var(--color-background-primary)",
@@ -20,8 +20,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"]
-      }
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
