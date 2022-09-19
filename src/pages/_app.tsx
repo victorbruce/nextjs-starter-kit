@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlProvider } from "next-intl";
 import Script from "next/script";
 
-import * as gtag from "config/gtag";
+import * as gtag from "lib/gtag";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
