@@ -2,8 +2,9 @@ import "../styles/globals.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
-import Script from "next/script";
 import { ThemeProvider } from "next-themes";
+import { NextIntlProvider } from "next-intl";
+import Script from "next/script";
 
 import * as gtag from "config/gtag";
 
@@ -44,9 +45,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           });`,
         }}
       />
+      <NextIntlProvider messages={pageProps.messages}>
       <ThemeProvider defaultTheme="system">
         <Component {...pageProps} />
       </ThemeProvider>
+      </NextIntlProvider>
     </>
   );
 }
