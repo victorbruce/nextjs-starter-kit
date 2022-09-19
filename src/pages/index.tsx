@@ -18,12 +18,12 @@ const HomePage = () => {
         <title>Next Starter</title>
         <meta name="description" content="My next starter template project" />
       </Head>
-      <main className="h-screen w-screen flex flex-col items-center justify-center">
+      <main className="h-screen w-screen flex flex-col items-center justify-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: [0.5, 0, 1], y: 0 }}
           transition={{ duration: 1.2 }}
-          className="font-bold text-3xl mb-4 bg-back-secondary"
+          className=""
         >
           {t("hello")}
         </motion.h1>
@@ -33,6 +33,19 @@ const HomePage = () => {
             Switch to {otherLocale}
           </a>
         </Link>
+        <hr />
+        <div>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <p>This is a paragraph.</p>
+          <p className="text-fore-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias neque
+            laboriosam quam dolorem quaerat! Exercitationem quis magni magnam
+            eos corrupti ad modi, nam hic odio accusantium tenetur alias
+            consequuntur unde?
+          </p>
+        </div>
       </main>
     </div>
   );

@@ -1,12 +1,11 @@
 import { useTheme } from "next-themes";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const themes = [
-  { name: "Light" },
-  { name: "Dark" },
-  { name: "Emerald" },
-  { name: "Pink" },
-];
+// icons
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+
+const themes = [{ name: "Light" }, { name: "Dark" }, { name: "System" }];
+
 const ToggleThemeButton = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -19,18 +18,33 @@ const ToggleThemeButton = () => {
     setMounted(true);
   }, []);
 
+  function renderIcon() {
+    let dark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark").matches;
+
+    if (theme === "system" && dark) {
+      return <MoonIcon className="text-accent h-6 w-6" />;
+    } else if (theme === "system" && !dark) {
+      return <SunIcon className="text-accent h-6 w-6" />;
+    } else if (theme === "light") {
+      return <SunIcon className="text-accent h-6 w-6" />;
+    } else {
+      return <MoonIcon className="text-accent h-6 w-6" />;
+    }
+  }
+
   if (!mounted) {
     return null;
   }
 
   return (
     <>
-      <p className="mb-2">Current Theme: {theme}</p>
-      <button className="px-4 py-2 rounded-sm bg-th-background text-th-primary-dark">
-        {/* Toggle to {theme === "light" ? "dark" : "light"} theme */}
-
+      <p>Current theme:{theme}</p>
+      <p className="flex items-center gap-2">{renderIcon()}</p>
+      <button className="px-4 py-2 rounded-sm bg-back-secondary">
         <select onChange={handleSetTheme} className="outline-none">
-          <option value="">{theme}</option>
+          <option value={theme}>{theme}</option>
           {themes.map((t) => (
             <option key={t.name.toLowerCase()} value={t.name.toLowerCase()}>
               {t.name}
