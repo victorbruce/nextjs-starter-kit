@@ -9,7 +9,8 @@
     "lint": "next lint",
     "e2e": "cypress open",
     "test": "cypress run --headless",
-    "testWatch": "nodemon -e ts,tsx,js,jsx --exec cypress run"
+    "testWatch": "nodemon -e ts,tsx,js,jsx --exec cypress run",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.11",
@@ -24,13 +25,24 @@
     "@types/node": "17.0.36",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
     "autoprefixer": "^10.4.11",
     "cypress": "^10.8.0",
-    "eslint": "8.16.0",
+    "eslint": "^8.23.1",
     "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "nodemon": "^2.0.20",
     "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8",
     "typescript": "4.7.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
