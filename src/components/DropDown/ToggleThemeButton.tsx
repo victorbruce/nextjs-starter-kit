@@ -38,7 +38,7 @@ const DropDown = (): JSX.Element | null => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="">
-        <Menu.Button className="inline-flex w-full justify-center text-sm font-medium  focus:outline-none">
+        <Menu.Button aria-label="theme mode" className="inline-flex w-full justify-center text-sm font-medium  focus:outline-none">
           {renderIcon()}
         </Menu.Button>
       </div>

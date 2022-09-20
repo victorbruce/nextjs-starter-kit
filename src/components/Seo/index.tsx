@@ -10,7 +10,7 @@ interface SeoProps {
 const Seo = ({
   title = "Next Starter Kit",
   description = "Kick start your NextJs project with all the essentials already setup for you",
-  url = "http://localhost:3000",
+  url = "https://nextjs-starter-kit-coral.vercel.app/",
   image = "/vercel.svg",
 }: SeoProps): JSX.Element => {
   return (
