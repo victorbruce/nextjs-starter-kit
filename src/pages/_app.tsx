@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlProvider } from "next-intl";
 import Script from "next/script";
 
+import Seo from "components/seo";
 import * as gtag from "lib/gtag";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Seo />
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
@@ -46,9 +48,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <NextIntlProvider messages={pageProps.messages}>
-      <ThemeProvider defaultTheme="system">
-        <Component {...pageProps} />
-      </ThemeProvider>
+        <ThemeProvider defaultTheme="system">
+          <Component {...pageProps} />
+        </ThemeProvider>
       </NextIntlProvider>
     </>
   );
