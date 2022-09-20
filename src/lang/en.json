@@ -1,5 +1,6 @@
 {
 	"home": {
-		"hello": "hello"
+		"greeting": "hello",
+		"about": "A NextJs starter kit template for most of your project needs."
 	}
 }

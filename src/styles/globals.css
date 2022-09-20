@@ -31,6 +31,7 @@
   --color-background-primary: var(--color-dark);
   --color-background-secondary: var(--color-secondary);
   --color-accent-icon: var(--color-accent);
+  --color-border: var(--gray-200);
 }
 
 [data-theme="light"] {
@@ -39,6 +40,7 @@
   --color-background-primary: var(--color-light);
   --color-background-secondary: var(--gray-100);
   --color-accent-icon: var(--color-accent);
+  --color-border: var(--gray-100);
 }
 
 @font-face {

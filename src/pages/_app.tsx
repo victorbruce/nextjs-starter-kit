@@ -6,7 +6,11 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlProvider } from "next-intl";
 import Script from "next/script";
 
-import Seo from "components/seo";
+// layout
+import AppLayout from "layouts/AppLayout";
+
+// components
+import Seo from "components/Seo";
 import * as gtag from "lib/gtag";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -49,7 +53,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <NextIntlProvider messages={pageProps.messages}>
         <ThemeProvider defaultTheme="system">
-          <Component {...pageProps} />
+          <AppLayout>
+            <Component {...pageProps} />
+          </AppLayout>
         </ThemeProvider>
       </NextIntlProvider>
     </>

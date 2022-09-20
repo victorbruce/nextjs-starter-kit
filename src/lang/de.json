@@ -1,5 +1,6 @@
 {
 	"home": {
-		"hello": "holla"
+		"greeting": "holla",
+		"about": "Eine NextJs-Starterkit-Vorlage für die meisten Ihrer Projektanforderungen."
 	}
 }

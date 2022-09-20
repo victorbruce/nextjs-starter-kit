@@ -24,13 +24,13 @@ const ToggleThemeButton = () => {
       window.matchMedia("(prefers-color-scheme: dark").matches;
 
     if (theme === "system" && dark) {
-      return <MoonIcon className="text-accent h-6 w-6" />;
+      return <MoonIcon className="text-accent h-6 w-6 stroke-2" />;
     } else if (theme === "system" && !dark) {
-      return <SunIcon className="text-accent h-6 w-6" />;
+      return <SunIcon className="text-accent h-6 w-6 stroke-2" />;
     } else if (theme === "light") {
-      return <SunIcon className="text-accent h-6 w-6" />;
+      return <SunIcon className="text-accent h-6 w-6 stroke-2" />;
     } else {
-      return <MoonIcon className="text-accent h-6 w-6" />;
+      return <MoonIcon className="text-accent h-6 w-6 stroke-2" />;
     }
   }
 
@@ -39,10 +39,10 @@ const ToggleThemeButton = () => {
   }
 
   return (
-    <>
-      <p>Current theme:{theme}</p>
+    <div className="flex items-center px-4">
+      <p className="sr-only">Current theme:{theme}</p>
       <p className="flex items-center gap-2">{renderIcon()}</p>
-      <button className="px-4 py-2 rounded-sm bg-back-secondary">
+      {/* <button className="px-4 py-2 rounded-sm bg-back-secondary">
         <select onChange={handleSetTheme} className="outline-none">
           <option value={theme}>{theme}</option>
           {themes.map((t) => (
@@ -51,8 +51,8 @@ const ToggleThemeButton = () => {
             </option>
           ))}
         </select>
-      </button>
-    </>
+      </button> */}
+    </div>
   );
 };
 
