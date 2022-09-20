@@ -37,6 +37,7 @@ A NextJs texmplate starter kit that comes with **theme switching**, **multi lang
 
 - 📂 .github: holds all the yaml files for your github actions
 - 📂 .husky: contains post and pre commit scripts to ensure linting and formatting rules are adhered to before commiting your code
+- cypress: folder that contains all your e2e tests written in Cypress
 - 📂 public: keep all your images, svgs, fonts, etc. here
 - 📂 src: this is where all your main code for your app resides
   - 📂 components: contains a list of shared components used across the app.
