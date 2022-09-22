@@ -3,44 +3,40 @@
 @tailwind utilities;
 
 :root {
-  /* Color Pallete */
-  --white: #ffffff;
-  --black: #000000;
-  --green: #4ade80;
-  --red: #f87171;
-  --blue: #60a5fa;
-  --amber: #fbbf24;
-  --gray: #9ca3af;
-  --gray-100: #eee;
-  --gray-200: #374151;
-  --sky: #00bbff;
+  /* Palette */
+  --black: #111;
+  --black-dark: #1a1a1a;
+  --black-light: #262626;
+  --black-lighter: #525252;
+  --black-lightest: #737373;
 
-  --color-primary: var(--blue);
-  --color-secondary: var(--gray);
-  --color-danger: var(--red);
-  --color-success: var(--green);
-  --color-warning: var(--amber);
-  --color-light: var(--white);
-  --color-dark: var(--black);
-  --color-accent: var(--sky);
+  --white: #fff;
+  --white-light: #d4d4d4;
+  --white-lighter: #e5e5e5;
+  --white-lightest: #f5f5f5;
+  --white-dark: #a3a3a3;
 }
 
 [data-theme="dark"] {
-  --color-text-title: var(--color-light);
-  --color-text-body: var(--color-secondary);
-  --color-background-primary: var(--color-dark);
-  --color-background-secondary: var(--color-secondary);
-  --color-accent-icon: var(--color-accent);
-  --color-border: var(--gray-200);
+  --system-color-pageColor: var(--white);
+  --system-color-pageColorSecondary: var(--white-light);
+  --system-color-pageColorTertiary: var(--white-dark);
+  --system-color-pageBg: var(--black);
+  --system-color-pageBgSecondary: var(--black-dark);
+  --system-color-pageBgTertiary: var(--black-lighter);
+  --system-color-border: var(--black-light);
+  --system-color-dropdownBg: var(--black-dark);
 }
 
 [data-theme="light"] {
-  --color-text-title: var(--color-dark);
-  --color-text-body: var(--gray-200);
-  --color-background-primary: var(--color-light);
-  --color-background-secondary: var(--gray-100);
-  --color-accent-icon: var(--color-accent);
-  --color-border: var(--gray-100);
+  --system-color-pageColor: var(--black);
+  --system-color-pageColorSecondary: var(--black-lighter);
+  --system-color-pageColorTertiary: var(--black-lightest);
+  --system-color-pageBg: var(--white);
+  --system-color-pageBgSecondary: var(--white-lighter);
+  --system-color-pageBgTertiary: var(--white-lightest);
+  --system-color-border: var(--white-lighter);
+  --system-color-dropdownBg: var(--white);
 }
 
 @font-face {
@@ -70,8 +66,8 @@
   }
 
   body {
-    background-color: var(--color-background-primary);
-    color: var(--color-text-body);
+    background: var(--system-color-pageBg);
+    color: var(--system-color-pageColor);
     font-family: "Inter";
     line-height: 1.8;
   }

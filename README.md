@@ -4,7 +4,7 @@ A NextJs starter kit template for my personal needs.
 
 ## Demo Link
 
-This template is hosted on vercel at: [vb-nextjs-template](https://google.com)
+This template is hosted on vercel at: [https://nextjs-starter-kit-coral.vercel.app](https://nextjs-starter-kit-coral.vercel.app/)
 
 ## Table of Content
 
