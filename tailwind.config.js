@@ -10,18 +10,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "var(--color-accent-icon)",
-        border: {
-          color: "var(--color-border)",
-        },
-        fore: {
-          primary: "var(--color-text-title)",
-          secondary: "var(--color-text-body)",
-        },
-        back: {
-          primary: "var(--color-background-primary)",
-          secondary: "var(--color-background-secondary)",
-        },
+        pageColor: "var(--system-color-pageColor)",
+        pageColorSecondary: "var(--system-color-pageColorSecondary)",
+        pageColorTertiary: "var(--system-color-pageColorTertiary)",
+        pageBg: "var(--system-color-pageBg)",
+        pageBgSecondary: "var(--system-color-pageBgSecondary)",
+        pageBgTertiary: "var(--system-color-pageBgTertiary)",
+        borderColor: "var(--system-color-border)",
+        dropdownBg: "var(--system-color-dropdownBg)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
